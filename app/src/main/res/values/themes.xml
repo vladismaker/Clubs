@@ -1,0 +1,19 @@
+<resources>
+    <style name="Base.Theme.Clubs" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.Clubs" parent="Base.Theme.Clubs" />
+
+    <style name="Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/transparent</item>
+
+    </style>
+
+    <style name="Custom.Select" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:textColorSecondary">@color/grey</item>
+        <!-- Цвет текста для активного состояния -->
+        <item name="android:textColorPrimary">@color/select</item>
+    </style>
+</resources>

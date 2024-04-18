@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal"
+    android:layout_marginVertical="3dp"
+    android:layout_marginHorizontal="20dp"
+    android:weightSum="10"
+    android:background="@drawable/back_for_cards_schedule_white">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="08:00"
+            android:textStyle="bold"
+            android:textColor="@color/_1"
+            android:textSize="14sp"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/time_zone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Local Time"
+            android:textColor="@color/_2"
+            android:textSize="8sp"
+            android:gravity="center"
+            android:layout_marginTop="2dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="8"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp">
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Тренировка"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Силовая"
+            android:textColor="@color/grey"
+            android:textSize="11sp"
+            android:gravity="center"
+            android:layout_marginTop="2dp"/>
+    </LinearLayout>
+
+</LinearLayout>

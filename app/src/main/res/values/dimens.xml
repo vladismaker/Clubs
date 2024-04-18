@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="default_card_height">85dp</dimen>
+    <dimen name="default_card_width">55dp</dimen>
+
+    <dimen name="selected_card_height">100dp</dimen>
+    <dimen name="selected_card_width">70dp</dimen>
+
+    <dimen name="vertical_space_height">7.5dp</dimen>
+    <dimen name="vertical_space_height_null">0dp</dimen>
+    <dimen name="vertical_space_height_schedules">20dp</dimen>
+</resources>
