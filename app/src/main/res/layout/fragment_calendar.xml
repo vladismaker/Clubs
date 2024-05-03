@@ -6,21 +6,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".calendar.CalendarFragment"
-    android:background="@color/background_grey">
+    android:background="@color/white">
+
+    <FrameLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <ImageView
+            android:id="@+id/calendar_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="12dp"
+            android:src="@drawable/icon_calendar"
+            android:layout_gravity="center_vertical|end"
+            app:tint = "@color/select"
+            android:layout_marginEnd="6dp"
+            android:importantForAccessibility="no"
+            android:visibility="gone"/>
+    </FrameLayout>
 
     <TextView
         android:id="@+id/text_view_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="15dp"
-        android:paddingTop="15dp"
-        android:text="Date now"
+        android:layout_marginStart="15dp"
+        android:paddingTop="5dp"
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/white"/>
+        app:layout_constraintTop_toBottomOf="@+id/top_bar"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_date"
@@ -28,8 +46,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingVertical="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/text_view_date"
-        android:background="@color/white"/>
+        app:layout_constraintTop_toBottomOf="@+id/text_view_date"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_schedule"
@@ -39,7 +56,9 @@
         app:layout_constraintTop_toBottomOf="@id/recycler_view_date"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/background_grey"
+        android:visibility="gone"/>
 
     <LinearLayout
         android:id="@+id/hint"
@@ -49,7 +68,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/recycler_view_date">
+        app:layout_constraintTop_toBottomOf="@id/recycler_view_date"
+        android:visibility="gone">
 
         <ImageView
             android:layout_width="100dp"
@@ -64,5 +84,19 @@
             android:textSize="25sp"
             android:textStyle="bold" />
     </LinearLayout>
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_progress_bar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_speed="1.5"
+        app:lottie_rawRes="@raw/progress_bar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

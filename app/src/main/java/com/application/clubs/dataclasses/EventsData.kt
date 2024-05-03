@@ -5,5 +5,6 @@ data class EventsData(
     val time_zone:String,
     val title:String,
     val description:String,
-    val game_info:List<Any>
+    val schedule:String,
+    val game_info:List<DataGame>
 )

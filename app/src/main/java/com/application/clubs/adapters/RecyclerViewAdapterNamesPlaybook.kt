@@ -1,50 +1,46 @@
 package com.application.clubs.adapters
 
 import android.content.Context
-import android.graphics.Color
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.application.clubs.dataclasses.DataSchedule
 import com.application.clubs.R
-import com.application.clubs.dataclasses.DataGame
 
-class RecyclerViewAdapterSchedule(
-    private val allDataList: MutableList<DataSchedule>,
-    private val itemClickListenerSchedule: OnItemClickListenerSchedule
+class RecyclerViewAdapterNamesPlaybook(
+    private val listGameInfo: List<String>,
+    private val itemClickListenerPlaybook: OnItemClickListenerPlaybook,
+    private val positionOne: Int
     ) :
-    RecyclerView.Adapter<RecyclerViewAdapterSchedule.ViewHolder>() {
+    RecyclerView.Adapter<RecyclerViewAdapterNamesPlaybook.ViewHolder>() {
     private lateinit var contextAdapter: Context
 
     class ViewHolder(val cardView: LinearLayout) : RecyclerView.ViewHolder(cardView)
 
     override fun getItemCount(): Int {
-        return allDataList.size
+        return listGameInfo.size
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         contextAdapter = parent.context
         val cv = LayoutInflater.from(contextAdapter)
-            .inflate(R.layout.card_data_schedule, parent, false) as LinearLayout
+            .inflate(R.layout.card_data_game_info, parent, false) as LinearLayout
         return ViewHolder(cv)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val cardView = holder.cardView
 
-        if (allDataList.size==1){
+        if (listGameInfo.size==1){
             cardView.setBackgroundResource(R.drawable.back_for_cards_schedule_white)
         }else{
             when (position) {
                 0 -> {
                     cardView.setBackgroundResource(R.drawable.back_for_cards_schedule_top_white)
                 }
-                allDataList.size-1 -> {
+                listGameInfo.size-1 -> {
                     cardView.setBackgroundResource(R.drawable.back_for_cards_schedule_bottom_white)
                 }
                 else -> {
@@ -53,37 +49,14 @@ class RecyclerViewAdapterSchedule(
             }
         }
 
-
-        val time: TextView = cardView.findViewById(R.id.time)
         val name: TextView = cardView.findViewById(R.id.name)
-        val description: TextView = cardView.findViewById(R.id.description)
-        val timeZone: TextView = cardView.findViewById(R.id.time_zone)
-        val imageNext: ImageView = cardView.findViewById(R.id.image_next)
-
-        val timeString = allDataList[position].time
-        val nameString = allDataList[position].name
-        val descriptionString = allDataList[position].description
-        val timeZoneString= allDataList[position].timeZone
-        //val t = allDataList[position].gameInfo
-
-        time.text = timeString
+        val nameString = listGameInfo[position]
         name.text = nameString
-        description.text = descriptionString
-        timeZone.text = timeZoneString
 
-        checkNull(timeString, time)
         checkNull(nameString, name)
-        checkNull(descriptionString, description)
-        checkNull(timeZoneString, timeZone)
 
-        if (timeZoneString=="Home Time"){
-            imageNext.visibility = View.VISIBLE
-
-            cardView.setOnClickListener {
-                itemClickListenerSchedule.onItemClickSchedule(position)
-            }
-        }else{
-            imageNext.visibility = View.GONE
+        cardView.setOnClickListener {
+            itemClickListenerPlaybook.onItemClickPlaybook(positionOne, position)
         }
     }
 
@@ -95,8 +68,4 @@ class RecyclerViewAdapterSchedule(
             textView.visibility = View.VISIBLE
         }
     }
-}
-
-interface OnItemClickListenerSchedule {
-    fun onItemClickSchedule(position: Int)
 }

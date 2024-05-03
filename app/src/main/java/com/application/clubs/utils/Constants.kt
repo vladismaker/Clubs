@@ -1,4 +1,6 @@
 package com.application.clubs.utils
 
 const val BASE_URL = "http://teammanager.dealko.org/api/"
+const val TEAM_ID = 1
+const val URL = "http://teammanager.dealko.org"
 const val TOKEN = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJkZWFsa28ub3JnIiwiYXVkIjoidGVhbW1hbmFnZXIuZGVhbGtvLm9yZyIsImlhdCI6MTM1Njk5OTUyNCwibmJmIjoxMzU3MDAwMDAwLCJkYXRhIjp7ImlkIjoxLCJmaXJzdG5hbWUiOiJEZW5pcyIsImxhc3RuYW1lIjoiS29sZXNuZXYiLCJlbWFpbCI6ImRlbi5rb2xlc25ldkBnbWFpbC5jb20iLCJzaWduX2luX3R5cGUiOiJnb29nbGUifX0.w5_JQNrG2lXb05h7BT18MJSUpHYlpPIdJN39sIB8QOg"

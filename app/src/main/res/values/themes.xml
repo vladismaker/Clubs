@@ -1,19 +1,84 @@
 <resources>
     <style name="Base.Theme.Clubs" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/select</item>
+        <item name="colorSecondary">@color/black</item>
         <item name="android:statusBarColor">@color/white</item>
         <item name="android:windowLightStatusBar">true</item>
+        <!--<item name="colorPrimary">@color/select</item>
+        <item name="colorOnSecondary">@color/black</item>-->
     </style>
 
     <style name="Theme.Clubs" parent="Base.Theme.Clubs" />
 
-    <style name="Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+<!--    <style name="Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
         <item name="android:color">@color/transparent</item>
+        <item name="colorPrimary">@color/select</item>
+        <item name="colorSecondary">@color/black</item>
 
-    </style>
+    </style>-->
 
     <style name="Custom.Select" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
         <item name="android:textColorSecondary">@color/grey</item>
         <!-- Цвет текста для активного состояния -->
         <item name="android:textColorPrimary">@color/select</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">#F44336</item>
+        <item name="colorOnPrimary">#F44336</item>
+        <item name="colorPrimaryContainer">#E91E63</item>
+        <item name="colorOnPrimaryContainer">#F44336</item>
+        <item name="colorSecondary">#E91E63</item>
+        <item name="colorOnSecondary">#F44336</item>
+        <item name="itemRippleColor">#F44336</item>
+
+        <!--Цвет обводки-->
+        <item name="colorSecondaryContainer">#00FFFFFF</item>
+        <!--Иконка-->
+        <item name="colorOnSecondaryContainer">@color/select</item>
+        <!--Неактивная иконка-->
+        <item name="colorOnSurfaceVariant">@color/black</item>
+        <!--Текст активной иконки-->
+        <item name="colorOnSurface">@color/select</item>
+
+        <item name="colorTertiary">#3F51B5</item>
+        <item name="colorOnTertiary">@color/md_theme_onTertiary</item>
+        <item name="colorTertiaryContainer">#3F51B5</item>
+        <item name="colorOnTertiaryContainer">#FFEB3B</item>
+        <item name="colorError">@color/md_theme_error</item>
+        <item name="colorOnError">@color/md_theme_onError</item>
+        <item name="colorErrorContainer">@color/md_theme_errorContainer</item>
+        <item name="colorOnErrorContainer">@color/md_theme_onErrorContainer</item>
+        <item name="android:colorBackground">@color/md_theme_background</item>
+        <item name="colorOnBackground">#F44336</item>
+        <item name="colorSurface">#673AB7</item>
+
+        <item name="color">@color/black</item>
+        <item name="colorSurfaceVariant">#673AB7</item>
+
+        <item name="colorOutline">#FF9800</item>
+        <item name="colorOutlineVariant">@color/md_theme_outlineVariant</item>
+        <item name="colorSurfaceInverse">#9C27B0</item>
+        <item name="colorOnSurfaceInverse">@color/md_theme_inverseOnSurface</item>
+        <item name="colorPrimaryInverse">#9C27B0</item>
+        <item name="colorPrimaryFixed">#FFEB3B</item>
+        <item name="colorOnPrimaryFixed">#673AB7</item>
+        <item name="colorPrimaryFixedDim">#FF5722</item>
+        <item name="colorOnPrimaryFixedVariant">#3F51B5</item>
+        <item name="colorSecondaryFixed">#2196F3</item>
+        <item name="colorOnSecondaryFixed">#673AB7</item>
+        <item name="colorSecondaryFixedDim">#FF5722</item>
+        <item name="colorOnSecondaryFixedVariant">#CDDC39</item>
+        <item name="colorTertiaryFixed">@color/md_theme_tertiaryFixed</item>
+        <item name="colorOnTertiaryFixed">#673AB7</item>
+        <item name="colorTertiaryFixedDim">#FFEB3B</item>
+        <item name="colorOnTertiaryFixedVariant">#9C27B0</item>
+        <item name="colorSurfaceDim">#9C27B0</item>
+        <item name="colorSurfaceBright">#FF9800</item>
+        <item name="colorSurfaceContainerLowest">#FF9800</item>
+        <item name="colorSurfaceContainerLow">#03A9F4</item>
+        <item name="colorSurfaceContainer">#03A9F4</item>
+        <item name="colorSurfaceContainerHigh">#F44336</item>
+        <item name="colorSurfaceContainerHighest">#F44336</item>
     </style>
 </resources>

@@ -45,6 +45,8 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -53,4 +55,17 @@ dependencies {
 
     implementation ("com.squareup.retrofit2:retrofit:2.6.2")
     implementation ("com.squareup.retrofit2:converter-gson:2.6.2")
+
+    implementation ("com.squareup.picasso:picasso:2.8")
+
+    implementation("androidx.media3:media3-exoplayer:1.3.1")
+    implementation("androidx.media3:media3-exoplayer-dash:1.3.1")
+    implementation("androidx.media3:media3-ui:1.3.1")
+
+    implementation ("com.airbnb.android:lottie:5.2.0")
+
+/*    implementation ("com.google.android.exoplayer:exoplayer:2.16.1")
+    implementation ("com.github.khizar1556.MKVideoPlayer:mkvideoplayer:0.1.5")*/
+
+
 }

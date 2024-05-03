@@ -5,5 +5,6 @@ data class DataSchedule(
     var name: String = "",
     var description: String = "",
     var timeZone: String = "",
-    var gameInfo: String = "",
+    var schedule: String = "",
+    var gameInfo: List<DataGame> = listOf()
 )

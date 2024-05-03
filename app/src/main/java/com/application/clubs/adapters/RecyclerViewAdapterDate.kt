@@ -1,6 +1,7 @@
 package com.application.clubs.adapters
 
 import android.content.Context
+import android.graphics.Color
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -10,18 +11,16 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.application.clubs.dataclasses.DataCard
 import com.application.clubs.R
-import java.time.LocalDateTime
-import java.time.ZoneId
+import java.time.LocalDate
 import java.time.format.DateTimeFormatter
-import java.util.Locale
-import java.util.TimeZone
 
-class RecyclerViewAdapter(
+class RecyclerViewAdapterDate(
     private val allDataList: MutableList<DataCard>,
-    private val itemClickListener: OnItemClickListener
+    private val itemClickListener: OnItemClickListener,
+    pos: Int
 ) :
-    RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
-    private var selectedItem = 0
+    RecyclerView.Adapter<RecyclerViewAdapterDate.ViewHolder>() {
+    private var selectedItem = pos
     private lateinit var contextAdapter: Context
 
 
@@ -79,7 +78,7 @@ class RecyclerViewAdapter(
         }
         val layoutParams = cardView.layoutParams as ViewGroup.MarginLayoutParams
         // Устанавливаем состояние выделения карточки
-        if (position == selectedItem ) {
+        if (position == selectedItem) {
             cardView.setBackgroundResource(R.drawable.back_for_cards_date_selected)
             layoutParams.height =
                 contextAdapter.resources.getDimensionPixelSize(R.dimen.selected_card_height)
@@ -101,6 +100,16 @@ class RecyclerViewAdapter(
         }
         cardView.layoutParams = layoutParams
     }
+}
+
+fun getDataNow():String{
+    val formatterTime = DateTimeFormatter.ofPattern("yyyy-MM-dd")
+
+    // Получение текущей даты
+    val currentDate = LocalDate.now()
+
+    // Форматирование даты в строку
+    return currentDate.format(formatterTime)
 }
 
 interface OnItemClickListener {

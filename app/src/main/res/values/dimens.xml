@@ -10,4 +10,5 @@
     <dimen name="vertical_space_height">7.5dp</dimen>
     <dimen name="vertical_space_height_null">0dp</dimen>
     <dimen name="vertical_space_height_schedules">20dp</dimen>
+    <dimen name="bottom_line_height">1dp</dimen>
 </resources>
