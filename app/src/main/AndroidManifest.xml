@@ -3,6 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Добавьте разрешение для получения информации об учетных записях на устройстве -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <!-- Добавьте разрешение для использования учетной записи Google для аутентификации -->
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
+    <!-- Добавьте разрешение для проверки доступности Google Play Services на устройстве -->
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <!-- Добавьте разрешение для получения информации о местоположении пользователя, если это необходимо -->
+    <!-- Это разрешение может быть необходимо для некоторых функций Google Play Services -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- или -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Добавьте разрешение для работы с аккаунтами Google -->
+    <uses-permission android:name="com.google.android.gms.permission.CAR_SPEED" />
+
+    <!-- Опционально: добавьте разрешение для работы с аккаунтами Google Drive, если это необходимо -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"

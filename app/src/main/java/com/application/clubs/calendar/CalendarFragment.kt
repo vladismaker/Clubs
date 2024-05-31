@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.application.clubs.MainActivity
+import com.application.clubs.MainActivityViewModel
 import com.application.clubs.dataclasses.DataCard
 import com.application.clubs.dataclasses.DataSchedule
 import com.application.clubs.R
@@ -40,6 +41,7 @@ class CalendarFragment : Fragment(), OnItemClickListener, OnItemClickListenerSch
 
     //private lateinit var viewModel: CalendarViewModel
     private val viewModel: CalendarViewModel by activityViewModels()
+    private val viewModelMainActivity: MainActivityViewModel by activityViewModels<MainActivityViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -54,6 +56,8 @@ class CalendarFragment : Fragment(), OnItemClickListener, OnItemClickListenerSch
         super.onViewCreated(view, savedInstanceState)
         Log.d("debugLC", "onViewCreated")
         //viewModel = ViewModelProvider(this)[CalendarViewModel::class.java]
+
+        viewModelMainActivity.changeVisibilityBottomNavigation(true)
 
         viewModel.liveDataDate.observe(viewLifecycleOwner) {
             binding.textViewDate.text = it

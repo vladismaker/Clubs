@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -47,6 +48,7 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.firebase.database)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -63,9 +65,14 @@ dependencies {
     implementation("androidx.media3:media3-ui:1.3.1")
 
     implementation ("com.airbnb.android:lottie:5.2.0")
+    
+    implementation(platform("com.google.firebase:firebase-bom:33.0.0"))
+    implementation("com.google.firebase:firebase-auth-ktx:23.0.0")
+    implementation("com.google.android.gms:play-services-auth:21.1.1")
+    implementation ("com.google.android.gms:play-services-identity:18.0.0")
+    implementation("androidx.credentials:credentials:1.3.0-alpha03")
 
-/*    implementation ("com.google.android.exoplayer:exoplayer:2.16.1")
-    implementation ("com.github.khizar1556.MKVideoPlayer:mkvideoplayer:0.1.5")*/
-
+    /*    implementation ("com.google.android.exoplayer:exoplayer:2.16.1")
+        implementation ("com.github.khizar1556.MKVideoPlayer:mkvideoplayer:0.1.5")*/
 
 }

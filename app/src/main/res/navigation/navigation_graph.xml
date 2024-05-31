@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/calendarFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/calendarFragment"
@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_calendarFragment_to_calendarShortDescriptionFragment"
             app:destination="@id/calendarShortDescriptionFragment" />
+        <action
+            android:id="@+id/action_global_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
     <fragment
         android:id="@+id/playbookFragment"
@@ -28,6 +31,9 @@
         <action
             android:id="@+id/action_playbookFragment_to_playbookDescriptionFragment"
             app:destination="@id/playbookDescriptionFragment" />
+        <action
+            android:id="@+id/action_global_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
     <fragment
         android:id="@+id/calendarShortDescriptionFragment"
@@ -40,6 +46,9 @@
         <action
             android:id="@+id/action_calendarShortDescriptionFragment_to_calendarFullDescriptionFragment"
             app:destination="@id/calendarFullDescriptionFragment" />
+        <action
+            android:id="@+id/action_global_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
         <!--        <action
                     android:id="@+id/action_calendarShortDescriptionFragment_to_playbookFragment"
                     app:destination="@id/playbookFragment" />-->
@@ -52,12 +61,40 @@
         <action
             android:id="@+id/action_global_to_playbookFragment"
             app:destination="@id/playbookFragment" />
+        <action
+            android:id="@+id/action_global_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
     <fragment
         android:id="@+id/playbookDescriptionFragment"
         android:name="com.application.clubs.playbook.PlaybookDescriptionFragment"
         android:label="fragment_playbook_description"
         tools:layout="@layout/fragment_playbook_description" >
+        <action
+            android:id="@+id/action_global_to_calendarFragment"
+            app:destination="@id/calendarFragment" />
+        <action
+            android:id="@+id/action_global_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.application.clubs.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_calendarFragment"
+            app:destination="@id/calendarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.application.clubs.settings.SettingsFragment"
+        android:label="SettingsFragment" >
+        <action
+            android:id="@+id/action_settingsFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_global_to_calendarFragment"
             app:destination="@id/calendarFragment" />
