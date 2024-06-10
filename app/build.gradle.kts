@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.application.clubs"
+    namespace = "com.app.basket.team"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.application.clubs"
+        applicationId = "com.app.basket.team"
         minSdk = 27
         targetSdk = 34
         versionCode = 1

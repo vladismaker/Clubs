@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/calendarFragment">
 
     <fragment
         android:id="@+id/calendarFragment"
-        android:name="com.application.clubs.calendar.CalendarFragment"
+        android:name="com.app.basket.team.calendar.CalendarFragment"
         android:label="fragment_calendar"
         tools:layout="@layout/fragment_calendar" >
         <action
@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/playbookFragment"
-        android:name="com.application.clubs.playbook.PlaybookFragment"
+        android:name="com.app.basket.team.playbook.PlaybookFragment"
         android:label="fragment_playbook"
         tools:layout="@layout/fragment_playbook" >
         <action
@@ -37,7 +37,7 @@
     </fragment>
     <fragment
         android:id="@+id/calendarShortDescriptionFragment"
-        android:name="com.application.clubs.calendar.CalendarShortDescriptionFragment"
+        android:name="com.app.basket.team.calendar.CalendarShortDescriptionFragment"
         android:label="fragment_calendar_short_description"
         tools:layout="@layout/fragment_calendar_short_description" >
         <action
@@ -55,7 +55,7 @@
     </fragment>
     <fragment
         android:id="@+id/calendarFullDescriptionFragment"
-        android:name="com.application.clubs.calendar.CalendarFullDescriptionFragment"
+        android:name="com.app.basket.team.calendar.CalendarFullDescriptionFragment"
         android:label="fragment_calendar_full_description"
         tools:layout="@layout/fragment_calendar_full_description" >
         <action
@@ -67,7 +67,7 @@
     </fragment>
     <fragment
         android:id="@+id/playbookDescriptionFragment"
-        android:name="com.application.clubs.playbook.PlaybookDescriptionFragment"
+        android:name="com.app.basket.team.playbook.PlaybookDescriptionFragment"
         android:label="fragment_playbook_description"
         tools:layout="@layout/fragment_playbook_description" >
         <action
@@ -79,7 +79,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.application.clubs.login.LoginFragment"
+        android:name="com.app.basket.team.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -88,7 +88,7 @@
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.application.clubs.settings.SettingsFragment"
+        android:name="com.app.basket.team.settings.SettingsFragment"
         android:label="SettingsFragment" >
         <action
             android:id="@+id/action_settingsFragment_to_loginFragment"

@@ -1,26 +1,90 @@
 {
   "project_info": {
-    "project_number": "344986845277",
-    "project_id": "clubs-64193",
-    "storage_bucket": "clubs-64193.appspot.com"
+    "project_number": "872472740154",
+    "firebase_url": "https://basketteam-a42ae-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "basketteam-a42ae",
+    "storage_bucket": "basketteam-a42ae.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:344986845277:android:6c1a7f300de238a2648db4",
+        "mobilesdk_app_id": "1:872472740154:android:01066ec6669242ec54d003",
         "android_client_info": {
-          "package_name": "com.application.clubs"
+          "package_name": "com.app.basket.team"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "872472740154-uqo7cb6ftiv4cjo1k91mmj7vcf2cprdn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.basket.team",
+            "certificate_hash": "df7798be860190a1ee4ddcff486aa59f3fcdb937"
+          }
+        },
+        {
+          "client_id": "872472740154-o98j6fn06s302uvvn7ak7psh4o99bk4o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyCnbacCvxYjLKoRGjuAnEPRRUEfaruXxhs"
+          "current_key": "AIzaSyBHeQOWl_NlZn47_BKLRj6bMM7t-fgfIvU"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "872472740154-o98j6fn06s302uvvn7ak7psh4o99bk4o.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "872472740154-r4uarfd9ipr1sfdr6udftogeg18no0bh.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.dealko.basketteam",
+                "app_store_id": "6475647754"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:872472740154:android:5f756d227f23461954d003",
+        "android_client_info": {
+          "package_name": "com.application.clubs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "872472740154-o98j6fn06s302uvvn7ak7psh4o99bk4o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHeQOWl_NlZn47_BKLRj6bMM7t-fgfIvU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "872472740154-o98j6fn06s302uvvn7ak7psh4o99bk4o.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "872472740154-r4uarfd9ipr1sfdr6udftogeg18no0bh.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.dealko.basketteam",
+                "app_store_id": "6475647754"
+              }
+            }
+          ]
         }
       }
     }
